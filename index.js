@@ -172,7 +172,14 @@ console.log(" ");
 
 console.log("<=== FUNCTION CALCULATOR ===>");
 
+let number1 = "10";
+let number2 = 2;
+let operator = "*";
+
 function calculator(number1, number2, operator) {
+  if (isNaN(number1) || isNaN(number2)) {
+    return "Error Bukan Number";
+  }
   if (operator === "+") {
     return number1 + number2;
   } else if (operator === "-") {
@@ -186,12 +193,10 @@ function calculator(number1, number2, operator) {
   }
 }
 
-let number1 = 10;
-let number2 = 2;
-let operator = "*";
-console.log(calculator(number1, number2, operator));
-
-const calculator2 = () => {
+const calculator2 = function (number1, number2, operator) {
+  if (isNaN(number1) || isNaN(number2)) {
+    return "Error Bukan Number";
+  }
   if (operator === "+") {
     return number1 + number2;
   } else if (operator === "-") {
@@ -204,5 +209,5 @@ const calculator2 = () => {
     return "operator salah";
   }
 };
-
+console.log(calculator(number1, number2, operator));
 console.log(calculator2(number1, number2, operator));
