@@ -34,8 +34,8 @@ console.log("<=== MENGUBAH TIPE DATA  ===>");
 let age = "42";
 let height = "160";
 const mengubahTypeData = (agePerson, heightPerson) => {
-  age = parseInt(agePerson);
-  height = parseFloat(heightPerson);
+  const age = parseInt(agePerson);
+  const height = parseFloat(heightPerson);
   return [age, height];
 };
 const resultMengubahTipeData = mengubahTypeData(age, height);
