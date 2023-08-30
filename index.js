@@ -189,4 +189,4 @@ function calculator(number1, number2, operator) {
 let number1 = 10;
 let number2 = 2;
 let operator = "/";
-console.log(calculator(1, 2, "+"));
+console.log(calculator(number1, number2, operator));
