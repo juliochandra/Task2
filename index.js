@@ -3,84 +3,168 @@ console.log(" ");
 
 console.log("<=== MANIPULASI STRING ===>");
 let fullName = "Julio Chandra Pratama";
-let lengthName = fullName.length;
-let upperCaseName = fullName.toUpperCase();
-let lowerCaseName = fullName.toLowerCase();
-let firstCharName = fullName[0];
-let nickName = fullName.substring(0, 5);
-let combinationName = nickName + " " + "Love Javascript";
-let lastCharName = fullName[fullName.length - 1];
-
-console.log(fullName);
-console.log(lengthName);
-console.log(upperCaseName);
-console.log(lowerCaseName);
-console.log(firstCharName);
-console.log(nickName);
-console.log(combinationName);
-console.log(lastCharName);
-console.log(" ");
+const manipulasiString = (name) => {
+  let studentName = name;
+  let lengthName = name.length;
+  let upperCaseName = name.toUpperCase();
+  let lowerCaseName = name.toLowerCase();
+  let firstCharName = name[0];
+  let nickName = name.substring(0, 5);
+  let combinationName = nickName + " " + "Love Javascript";
+  let lastCharName = name[name.length - 1];
+  return [
+    studentName,
+    lengthName,
+    upperCaseName,
+    lowerCaseName,
+    firstCharName,
+    nickName,
+    combinationName,
+    lastCharName,
+  ];
+};
+const resultManipulasiString = manipulasiString(fullName);
+for (let i = 0; i < resultManipulasiString.length; i++) {
+  const result = resultManipulasiString[i];
+  console.log(result);
+}
+console.log("");
 
 console.log("<=== MENGUBAH TIPE DATA  ===>");
 let age = "42";
-age = parseInt(age);
 let height = "160";
-height = parseFloat(height);
-
-console.log(age);
-console.log(height);
-console.log(" ");
+const mengubahTypeData = (agePerson, heightPerson) => {
+  age = parseInt(agePerson);
+  height = parseFloat(heightPerson);
+  return [age, height];
+};
+const resultMengubahTipeData = mengubahTypeData(age, height);
+for (let i = 0; i < resultMengubahTipeData.length; i++) {
+  const result = resultMengubahTipeData[i];
+  console.log(result);
+}
+console.log("");
 
 console.log("<=== PENGECEKAN TIPE DATA  ===>");
 let data = "Hello World";
-
-console.log(typeof data);
+const pengecekanTypeData = (data) => {
+  return typeof data;
+};
+console.log(pengecekanTypeData(data));
 console.log(" ");
 
 console.log("<=== PENJUMLAHAN DAN PENGURANGAN  ===>");
 let num1 = 10;
 let num2 = 5;
-
-console.log(num1 + num2);
-console.log(num1 - num2);
+const penjumlahanDanPengurangan = (num1, num2) => {
+  let penjumlahan = num1 + num2;
+  let pengurangan = num1 - num2;
+  return [penjumlahan, pengurangan];
+};
+const resultPenjumlahanDanPengurangan = penjumlahanDanPengurangan(num1, num2);
+for (let i = 0; i < resultPenjumlahanDanPengurangan.length; i++) {
+  const result = resultPenjumlahanDanPengurangan[i];
+  console.log(result);
+}
 console.log(" ");
 
 console.log("<=== PERKALIAN DAN PEBAGIAN  ===>");
 let num3 = 6;
 let num4 = 2;
-
-console.log(num3 * num4);
-console.log(num3 / num4);
+const perkalianDanPembagian = (num1, num2) => {
+  let perkalian = num3 * num4;
+  let pembagian = num3 / num4;
+  return [perkalian, pembagian];
+};
+const resultPerkalianDanPembagian = perkalianDanPembagian(num1, num2);
+for (let i = 0; i < resultPerkalianDanPembagian.length; i++) {
+  const result = resultPerkalianDanPembagian[i];
+  console.log(result);
+}
 console.log(" ");
 
 console.log("<=== PANGKAT BILANGAN  ===>");
 let base = 3;
 let exponent = 4;
-
-console.log(Math.pow(base, exponent));
+const pangkatBilangan = (base, exponent) => {
+  return Math.pow(base, exponent);
+};
+console.log(pangkatBilangan(base, exponent));
 console.log(" ");
 
 console.log("<=== RATA-RATA DARI ARRAY  ===>");
 let numbers = [5, 8, 12, 4, 6];
-let total = 0;
-for (let number of numbers) {
-  total += number;
-}
-let average = total / numbers.length;
-console.log(numbers);
-console.log(average);
+const rataRataArray = (numbers) => {
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  let average = total / numbers.length;
+  return average;
+};
+console.log(rataRataArray(numbers));
 console.log(" ");
 
 console.log("<=== BILANGAN GANJIL ATAU GENAP  ===>");
-let num5 = 7;
-if (num5 % 2 === 0) {
-  console.log(`angka ${num5} adalah angka genap`);
-} else {
-  console.log(`angka ${num5} adalah angka ganjil`);
-}
+let num5 = 12;
+const bilanganGanjilGenap = (num5) => {
+  if (num5 % 2 === 0) {
+    return `angka ${num5} adalah angka genap`;
+  } else {
+    return `angka ${num5} adalah angka ganjil`;
+  }
+};
+console.log(bilanganGanjilGenap(num5));
 console.log(" ");
 
 console.log("<=== RANDOM  ===>");
+const randomFuction = () => {
+  let randomNumber = Math.ceil(Math.random() * 5);
+  return randomNumber;
+};
+console.log(randomFuction());
+console.log(" ");
 
-let randomNumber = Math.ceil(Math.random() * 5);
-console.log(randomNumber);
+console.log("<=== KONVERSI CELCIUS KE FAHRENHEIT ===>");
+let temperatureC = 100;
+let temperatureF = 100;
+const convertTempToF = (temperatureC) => {
+  resultF = (temperatureC * 9) / 5 + 32;
+  return resultF;
+};
+const convertTempToC = (temperatureF) => {
+  let resultC = ((temperatureF - 32) * 5) / 9;
+  return resultC;
+};
+console.log(convertTempToF(temperatureC));
+console.log(convertTempToC(temperatureF));
+console.log(" ");
+
+console.log("<=== PANGKAT SEDERHANA ===>");
+let angkaBase = 4;
+let angkaExponent = 2;
+
+const pangkatSederhana = (base, exponent) => {
+  let resultPangkat = Math.pow(base, exponent);
+  return resultPangkat;
+};
+console.log(pangkatSederhana(angkaBase, angkaExponent));
+console.log(" ");
+
+console.log("<=== CEK HURUF VOKAL ===>");
+let huruf = "g";
+huruf = huruf.toUpperCase();
+const cekHurufVokal = (huruf) => {
+  if (
+    huruf === "A" ||
+    huruf === "E" ||
+    huruf === "I" ||
+    huruf === "O" ||
+    huruf === "U"
+  ) {
+    return `${huruf} adalah huruf vokal`;
+  } else {
+    return `${huruf} bukan huruf vokal`;
+  }
+};
+console.log(cekHurufVokal(huruf));
