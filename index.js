@@ -168,3 +168,25 @@ const cekHurufVokal = (huruf) => {
   }
 };
 console.log(cekHurufVokal(huruf));
+console.log(" ");
+
+console.log("<=== FUNCTION CALCULATOR ===>");
+
+function calculator(number1, number2, operator) {
+  if (operator === "+") {
+    return number1 + number2;
+  } else if (operator === "-") {
+    return number1 - number2;
+  } else if (operator === "*") {
+    return number1 * number2;
+  } else if (operator === "/") {
+    return number1 / number2;
+  } else {
+    return "operator salah";
+  }
+}
+
+let number1 = 10;
+let number2 = 2;
+let operator = "/";
+console.log(calculator(1, 2, "+"));
