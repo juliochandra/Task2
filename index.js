@@ -188,5 +188,21 @@ function calculator(number1, number2, operator) {
 
 let number1 = 10;
 let number2 = 2;
-let operator = "/";
+let operator = "*";
 console.log(calculator(number1, number2, operator));
+
+const calculator2 = () => {
+  if (operator === "+") {
+    return number1 + number2;
+  } else if (operator === "-") {
+    return number1 - number2;
+  } else if (operator === "*") {
+    return number1 * number2;
+  } else if (operator === "/") {
+    return number1 / number2;
+  } else {
+    return "operator salah";
+  }
+};
+
+console.log(calculator2(number1, number2, operator));
