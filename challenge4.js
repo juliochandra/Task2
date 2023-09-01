@@ -38,25 +38,22 @@ console.log(convertTempToC(temperatureF));
 console.log(" ");
 
 // Currying function
-console.log("<=== KORVERSI CELCIUS KE FAHRENHIT DI CURRYING ===>");
+console.log("<=== KONVERSI CELSIUS KE FAHRENHEIT DENGAN CURRYING ===>");
+
 let temperature = 100;
+let a = 9;
+let b = 5;
+let c = 32;
 
-const formulaFahrenheit = (temp) => {
-  return (temp * 9) / 5 + 32;
-};
-const formulaCelcius = (temp) => {
-  return ((temp - 32) * 5) / 9;
-};
-
-const celciusToFahrenheit = (tempeaturInCelcius) => {
-  return formulaFahrenheit(tempeaturInCelcius);
-};
-const fahrenheitToCelcius = (tempeaturInCelcius) => {
-  return formulaCelcius(tempeaturInCelcius);
+const convertToFahrenheit = (temp) => {
+  return (a) => {
+    return (b) => {
+      return (c) => {
+        return (temp * a) / b + c;
+      };
+    };
+  };
 };
 
-const convertedTempInFahrenheit = celciusToFahrenheit(temperature);
-const convertedTempInCelcius = fahrenheitToCelcius(temperature);
-
-console.log(convertedTempInFahrenheit);
-console.log(convertedTempInCelcius);
+const resultConvertTempInFahrenheit = convertToFahrenheit(temperature)(a)(b)(c);
+console.log(resultConvertTempInFahrenheit);
