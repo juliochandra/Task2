@@ -3,7 +3,7 @@ console.log(" ");
 
 console.log("<=== MANIPULASI STRING ===>");
 let fullName = "Julio Chandra Pratama";
-const manipulasiString = (name) => {
+const manipulasiString = function (name) {
   let studentName = name;
   let lengthName = name.length;
   let upperCaseName = name.toUpperCase();
@@ -33,7 +33,7 @@ console.log("");
 console.log("<=== MENGUBAH TIPE DATA  ===>");
 let age = "42";
 let height = "160";
-const mengubahTypeData = (agePerson, heightPerson) => {
+const mengubahTypeData = function (agePerson, heightPerson) {
   const age = parseInt(agePerson);
   const height = parseFloat(heightPerson);
   return [age, height];
@@ -47,7 +47,7 @@ console.log("");
 
 console.log("<=== PENGECEKAN TIPE DATA  ===>");
 let data = "Hello World";
-const pengecekanTypeData = (data) => {
+const pengecekanTypeData = function (data) {
   return typeof data;
 };
 console.log(pengecekanTypeData(data));
@@ -56,7 +56,7 @@ console.log(" ");
 console.log("<=== PENJUMLAHAN DAN PENGURANGAN  ===>");
 let num1 = 10;
 let num2 = 5;
-const penjumlahanDanPengurangan = (num1, num2) => {
+const penjumlahanDanPengurangan = function (num1, num2) {
   let penjumlahan = num1 + num2;
   let pengurangan = num1 - num2;
   return [penjumlahan, pengurangan];
@@ -71,12 +71,12 @@ console.log(" ");
 console.log("<=== PERKALIAN DAN PEBAGIAN  ===>");
 let num3 = 6;
 let num4 = 2;
-const perkalianDanPembagian = (num1, num2) => {
+const perkalianDanPembagian = function (num3, num4) {
   let perkalian = num3 * num4;
   let pembagian = num3 / num4;
   return [perkalian, pembagian];
 };
-const resultPerkalianDanPembagian = perkalianDanPembagian(num1, num2);
+const resultPerkalianDanPembagian = perkalianDanPembagian(num3, num4);
 for (let i = 0; i < resultPerkalianDanPembagian.length; i++) {
   const result = resultPerkalianDanPembagian[i];
   console.log(result);
@@ -86,7 +86,7 @@ console.log(" ");
 console.log("<=== PANGKAT BILANGAN  ===>");
 let base = 3;
 let exponent = 4;
-const pangkatBilangan = (base, exponent) => {
+const pangkatBilangan = function (base, exponent) {
   return Math.pow(base, exponent);
 };
 console.log(pangkatBilangan(base, exponent));
@@ -94,7 +94,7 @@ console.log(" ");
 
 console.log("<=== RATA-RATA DARI ARRAY  ===>");
 let numbers = [5, 8, 12, 4, 6];
-const rataRataArray = (numbers) => {
+const rataRataArray = function (numbers) {
   let total = 0;
   for (let i = 0; i < numbers.length; i++) {
     total += numbers[i];
@@ -107,7 +107,7 @@ console.log(" ");
 
 console.log("<=== BILANGAN GANJIL ATAU GENAP  ===>");
 let num5 = 12;
-const bilanganGanjilGenap = (num5) => {
+const bilanganGanjilGenap = function (num5) {
   if (num5 % 2 === 0) {
     return `angka ${num5} adalah angka genap`;
   } else {
@@ -128,11 +128,11 @@ console.log(" ");
 console.log("<=== KONVERSI CELCIUS KE FAHRENHEIT ===>");
 let temperatureC = 100;
 let temperatureF = 100;
-const convertTempToF = (temperatureC) => {
+const convertTempToF = function (temperatureC) {
   resultF = (temperatureC * 9) / 5 + 32;
   return resultF;
 };
-const convertTempToC = (temperatureF) => {
+const convertTempToC = function (temperatureF) {
   let resultC = ((temperatureF - 32) * 5) / 9;
   return resultC;
 };
@@ -144,7 +144,7 @@ console.log("<=== PANGKAT SEDERHANA ===>");
 let angkaBase = 4;
 let angkaExponent = 2;
 
-const pangkatSederhana = (base, exponent) => {
+const pangkatSederhana = function (base, exponent) {
   let resultPangkat = Math.pow(base, exponent);
   return resultPangkat;
 };
@@ -154,7 +154,7 @@ console.log(" ");
 console.log("<=== CEK HURUF VOKAL ===>");
 let huruf = "g";
 huruf = huruf.toUpperCase();
-const cekHurufVokal = (huruf) => {
+const cekHurufVokal = function (huruf) {
   if (
     huruf === "A" ||
     huruf === "E" ||
